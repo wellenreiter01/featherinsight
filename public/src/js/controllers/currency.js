@@ -18,9 +18,7 @@ angular.module('insight.currency').controller('CurrencyController',
 
         var response;
 
-        if (this.symbol === 'USD') {
-          response = _roundFloat((value * this.factor), 2);
-        } else if (this.symbol === 'mBTC') {
+        if (this.symbol === 'mFTC') {
           this.factor = 1000;
           response = _roundFloat((value * this.factor), 5);
         } else if (this.symbol === 'bits') {
@@ -43,11 +41,7 @@ angular.module('insight.currency').controller('CurrencyController',
       $rootScope.currency.symbol = currency;
       localStorage.setItem('insight-currency', currency);
 
-      if (currency === 'USD') {
-        Currency.get({}, function(res) {
-          $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
-        });
-      } else if (currency === 'mBTC') {
+      if (currency === 'mFTC') {
         $rootScope.currency.factor = 1000;
       } else if (currency === 'bits') {
         $rootScope.currency.factor = 1000000;

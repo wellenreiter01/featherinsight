@@ -6,7 +6,7 @@
     "name": "Ryan X Charles",
     "email": "ryan@bitpay.com"
   },
-  "repository": "git://github.com/bitpay/insight.git",
+  "repository": "git://github.com/Bushstar/featherinsight.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -46,7 +46,7 @@
     "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-bitcore-api"
   },
   "dependencies": {
-    "insight-bitcore-api": ">0.2.10"
+    "insight-bitcore-api": "git://github.com/Bushstar/feather-api.git"
   },
   "devDependencies": {
     "bower": "~1.2.8",
